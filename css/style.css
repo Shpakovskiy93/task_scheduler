@@ -16,18 +16,25 @@ img {
     padding: 40px 15px;
 }
 
+.full-calendar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: baseline;
+    justify-content: center;
+}
 .calendar {
     display: grid;
-    gap: 10px;
-    width: 800px;
+    gap: 5px;
+    margin-bottom: 20px;
 }
 .calendar__head {
     display: grid;
-    gap: 10px;
+    gap: 5px;
     background-color: gray;
     color: #fff;
     text-align: center;
-    padding: 20px;
+    padding: 5px;
 }
 .calendar__month {
     font-size: 24px;
@@ -39,21 +46,22 @@ img {
     gap: 10px;
 }
 .calendar__cell {
-    padding: 20px;
+    padding: 5px;
 }
 .calendar__cell_week-day {
     background-color: bisque;
     padding: 20px;
 }
 .calendar__cell_weekend {
-    background-color: rgb(196, 198, 201);
+    color: red;
 }
 .calendar__cell_day {
     background-color: aqua;
 }
 .calendar__cell_day-weekend {
-    background-color: rgb(71, 85, 85);
+    color: red;
 }
 .calendar__cell_day-today {
     background-color: rgb(112, 104, 215);
+    color: #fff;
 }
