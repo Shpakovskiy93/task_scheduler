@@ -21,12 +21,12 @@ export class CalendarMonth {
 
         this.$container = $container;
 
-        if($currentYear) {
-            this.year = $currentYear;
+        if($currentYear !== null) {
+            this._date.setFullYear($currentYear);
         }
 
-        if($currentMonth) {
-            this.month = $currentMonth;
+        if($currentMonth !== null) {
+            this._date.setMonth($currentMonth)
         }
 
         this.calendarHead = this.createCalendarHead();

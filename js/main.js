@@ -1,17 +1,16 @@
-import { CalendarMonth } from "./CalendarMonth.js";
-
-const $fullCalendar = document.querySelector('.full-calendar');
+import { CalendarYear } from "./CalendarYear.js";
 
 
-for (let index = 0; index < 12; index++) {
-    const $container = document.createElement('div');
-    $container.classList.add('calendar');
+const calendar = new CalendarYear(document.querySelector('.full-calendar'), 2023)
 
-    const calendar = new CalendarMonth($container);
-    calendar.month = index;
+document.getElementById('year-select').addEventListener('change', function() {
+    calendar.year = this.value;
+})
 
-    $fullCalendar.append($container);
-}
+
+
+
+
 
 // const calendar = new CalendarMonth($fullCalendar);
 

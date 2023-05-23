@@ -17,16 +17,21 @@ img {
 }
 
 .full-calendar {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 20px;
     align-items: baseline;
-    justify-content: center;
 }
-.calendar {
+.calendar-month {
     display: grid;
     gap: 5px;
     margin-bottom: 20px;
+    padding: 10px;
+    transition: background .2s ease-in ;
+    cursor: pointer;
+}
+.calendar-month:hover {
+    background-color: antiquewhite;
 }
 .calendar__head {
     display: grid;
@@ -47,6 +52,7 @@ img {
 }
 .calendar__cell {
     padding: 5px;
+    text-align: center;
 }
 .calendar__cell_week-day {
     background-color: bisque;
