@@ -16,6 +16,8 @@ export class CalendarYear {
 
     renderYear() {
         this.$container.innerHTML = '';
+        this.$fullCalendar = document.createElement('div');
+        this.$fullCalendar.classList.add('full-calendar');
 
         for (let index = 0; index < 12; index++) {
             const $containerMonth = document.createElement('div');
@@ -24,8 +26,10 @@ export class CalendarYear {
             const calendar = new CalendarMonth($containerMonth, this.year, index);
             calendar.month = index;
         
-            this.$container.append($containerMonth);
+            this.$fullCalendar.append($containerMonth);
         }
+
+        this.$container.append(this.$fullCalendar);
     }
 
     set year(value) {

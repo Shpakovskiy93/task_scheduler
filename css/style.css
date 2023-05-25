@@ -16,6 +16,36 @@ img {
     padding: 40px 15px;
 }
 
+.navigation {
+
+}
+.navigation__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 10px;
+    background-color: rgb(141, 161, 154);
+}
+.navigation__mode-btn {
+
+}
+.navigation__mode-btn.navigation__mode-btn_active {
+    background-color: blue;
+    color: #fff;
+}
+.navigation__body {
+    background-color: rgb(201, 162, 89);
+}
+.navigation__body-mode {
+    display: none;
+}
+.navigation__body-mode.navigation__body-mode_active {
+    display: block;
+}
+
+
+
 .full-calendar {
     display: grid;
     grid-template-columns: 1fr 1fr;
